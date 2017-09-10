@@ -34,20 +34,25 @@ h1 {
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.timeline-top {
-  text-align: center;
+.timeline-top::after {
+  width: 0px !important;
+  height: 0px !important;
+  border: none !important;
 }
 
 .icon-year {
   display: inline-block;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   background-color: #07889b;
   color: #fff;
-  line-height: 70px;
+  line-height: 60px;
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
+  margin-left: -28px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .timeline ul li {
@@ -97,13 +102,13 @@ h1 {
     font-size: 20px;
 }
 
-.timeline ul li:nth-child(odd) div {
+/*.timeline ul li:nth-child(odd) div {
   left: 45px;
 }
 
 .timeline ul li:nth-child(even) div {
   left: -439px;
-}
+}*/
 
 time {
   display: block;
@@ -113,8 +118,16 @@ time {
 }
 
 .time-header {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+#mobile-md-indicator {
+  display: none;
+}
+
+#mobile-sm-indicator {
+  display: none;
 }
 
 
@@ -136,19 +149,21 @@ time {
   transition: all .5s ease-in-out;
 }
 
-.timeline ul li:nth-child(odd) div {
+/*.timeline ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
 
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
-}
+}*/
 
 .timeline ul li.in-view div {
   transform: none;
   visibility: visible;
   opacity: 1;
 }
+
+
 
 /* MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -158,9 +173,16 @@ time {
     width: 250px;
   }
 
-  .timeline ul li:nth-child(even) div {
+  /*.timeline ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
+    /*250+45-6}*/
+
+  #mobile-md-indicator {
+    display: block;
+  }
+
+  #mobile-sm-indicator {
+    display: none;
   }
 }
 
@@ -173,13 +195,16 @@ time {
     width: calc(100vw - 91px);
   }
 
-  .timeline ul li:nth-child(even) div {
+  /*.timeline ul li:nth-child(even) div {
     left: 45px;
+  }*/
+
+  #mobile-sm-indicator {
+    display: block;
   }
 
- .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
+  #mobile-md-indicator {
+    display: none;
   }
+
 }
